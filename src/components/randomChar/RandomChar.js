@@ -12,6 +12,8 @@ class RandomChar extends Component {
     error: false,
   };
 
+  marvelService = new MarvelService();
+
   componentDidMount() {
     this.updateChar();
   }
@@ -31,8 +33,6 @@ class RandomChar extends Component {
     });
     this.updateChar();
   };
-
-  marvelService = new MarvelService();
 
   onCharLoaded = (char) => {
     this.setState({ char, loading: false });
